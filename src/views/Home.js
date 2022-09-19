@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AddPost from "../components/AddPost";
+import FollowRecommendations from "../components/FollowRecommendations";
 import Post from "../components/Post";
 import './Home.css';
 
@@ -29,16 +30,28 @@ const Home = (props) => {
         });
     };
 
+
+    const getPrevPosts = () => {
+        axios.post("https://akademia108.pl/api/social-app/post/newer-then", {date: posts[0].created_at,})
+        .then((res) => {
+            setPosts(res.data.concat(posts))
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    };
+
     useEffect(() => {
         getLatestPosts();
     }, [props.user]);
 
     return (
         <div className="home">
-            {props.user && <AddPost />}
+            {props.user && <AddPost getPrevPosts={getPrevPosts}/>}
+            {props.user && <FollowRecommendations user={props.user} getLatestPosts={getLatestPosts} posts={posts}/>}
             <div className="postList">
                 {posts.map((post) => {
-                    return <Post post={post} key={post.id}/>;
+                    return <Post post={post} key={post.id} user={props.user} setPosts={setPosts} getLatestPosts={getLatestPosts}/>;
                 })}
                 <button className="btn loadMore" onClick={getNextPosts}>Load more</button>
             </div>
