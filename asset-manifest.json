@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Silentius222/ReactJS-Aplikacja-SocialApp/static/css/main.1a62bece.css",
+    "main.js": "/Silentius222/ReactJS-Aplikacja-SocialApp/static/js/main.102e5342.js",
+    "static/js/787.c45b6682.chunk.js": "/Silentius222/ReactJS-Aplikacja-SocialApp/static/js/787.c45b6682.chunk.js",
+    "index.html": "/Silentius222/ReactJS-Aplikacja-SocialApp/index.html",
+    "main.1a62bece.css.map": "/Silentius222/ReactJS-Aplikacja-SocialApp/static/css/main.1a62bece.css.map",
+    "main.102e5342.js.map": "/Silentius222/ReactJS-Aplikacja-SocialApp/static/js/main.102e5342.js.map",
+    "787.c45b6682.chunk.js.map": "/Silentius222/ReactJS-Aplikacja-SocialApp/static/js/787.c45b6682.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a62bece.css",
+    "static/js/main.102e5342.js"
+  ]
+}
